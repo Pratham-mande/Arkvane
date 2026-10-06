@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arkvane | AI, Cloud and Software Consulting</title>
+<meta name="description" content="Arkvane plans, builds and runs AI, cloud and custom software for growing and enterprise companies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{ink:'#0E1A17',forest:'#0B3A33',mint:'#12B58F',lime:'#D7F36B',fog:'#F2F5F1'},fontFamily:{sans:['"Plus Jakarta Sans"','system-ui','sans-serif']}}}}
+</script>
+<style>
+html{scroll-behavior:smooth}
+body{background:#F2F5F1;color:#0E1A17}
+:focus-visible{outline:2px solid #12B58F;outline-offset:3px}
+.rise{opacity:0;transform:translateY(22px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+.pic{overflow:hidden;clip-path:inset(0 0 100% 0 round 22px);transition:clip-path 1s cubic-bezier(.7,0,.2,1);transition-delay:var(--d,0s)}
+.in .pic,.pic.in{clip-path:inset(0 0 0 0 round 22px)}
+.pic>*{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.card:hover .pic>*{transform:scale(1.08)}
+.card{transition:transform .35s,box-shadow .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px #0B3A3366}
+.btn{transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px -10px #0B3A3399}
+.float{animation:fl 6s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-12px)}}
+.spin{animation:sp 40s linear infinite;transform-origin:center}
+@keyframes sp{to{transform:rotate(360deg)}}
+.marq{display:flex;width:max-content;animation:mq 34s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+.slide{position:absolute;inset:0;opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s;pointer-events:none}
+.slide.on{opacity:1;transform:none;pointer-events:auto}
+#tilt{transition:transform .25s ease-out}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.rise{opacity:1;transform:none}.pic{clip-path:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body class="font-sans antialiased">
+<div id="bar" class="fixed left-0 top-0 z-[60] h-[3px] w-0 bg-mint"></div>
+
+<header class="fixed inset-x-0 top-4 z-50 px-4">
+ <div id="pill" class="mx-auto flex h-14 max-w-5xl items-center justify-between rounded-full bg-white/80 px-3 pl-5 shadow-lg shadow-forest/5 ring-1 ring-forest/10 backdrop-blur-xl">
+  <a href="#top" class="flex items-center gap-2 text-lg font-extrabold tracking-tight"><svg width="28" height="28" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="9" fill="#0B3A33"/><path d="M8 22L15 7l7 15M10.5 17h9" stroke="#D7F36B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Arkvane</a>
+  <nav class="hidden items-center gap-7 text-sm font-semibold text-ink/70 md:flex" aria-label="Main"><a class="hover:text-ink" href="#services">Services</a><a class="hover:text-ink" href="#industries">Industries</a><a class="hover:text-ink" href="#roi">ROI</a><a class="hover:text-ink" href="#work">Work</a></nav>
+  <div class="flex items-center gap-2"><a href="#contact" class="btn hidden rounded-full bg-forest px-5 py-2.5 text-sm font-semibold text-white sm:block">Book a call</a>
+  <button id="mb" class="rounded-full p-2 md:hidden" aria-label="Open menu" aria-expanded="false"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h16M3 11h16M3 16h16"/></svg></button></div>
+ </div>
+ <div id="mn" class="mx-auto mt-2 hidden max-w-5xl rounded-3xl bg-white p-5 shadow-xl md:hidden"><div class="flex flex-col gap-4 font-semibold"><a href="#services">Services</a><a href="#industries">Industries</a><a href="#roi">ROI</a><a href="#work">Work</a><a href="#contact" class="rounded-full bg-forest px-4 py-3 text-center text-white">Book a call</a></div></div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="relative overflow-hidden pb-16 pt-32 lg:pt-40">
+ <div class="absolute -right-24 top-10 h-96 w-96 rounded-full bg-lime/60 blur-3xl"></div><div class="absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-mint/20 blur-3xl"></div>
+ <div class="relative mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-[1fr_1fr]">
+  <div>
+   <h1 class="rise text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-[3.7rem]">Technology partners for companies that want to move faster.</h1>
+   <p class="rise mt-6 max-w-lg text-lg leading-relaxed text-ink/70" style="animation-delay:.12s">Arkvane plans, builds and runs AI, cloud and software that your teams adopt from the first week.</p>
+   <div class="rise mt-9 flex flex-wrap items-center gap-4" style="animation-delay:.24s"><a href="#contact" class="btn rounded-full bg-forest px-8 py-4 font-semibold text-white">Book a free consultation</a><a href="#work" class="group flex items-center gap-2 font-semibold">See our work <span class="flex h-9 w-9 items-center justify-center rounded-full bg-lime transition group-hover:translate-x-1">&rarr;</span></a></div>
+   <div class="rise mt-12 flex items-center gap-4" style="animation-delay:.36s"><div class="flex -space-x-3" aria-hidden="true"><i class="h-10 w-10 rounded-full border-2 border-fog bg-mint"></i><i class="h-10 w-10 rounded-full border-2 border-fog bg-lime"></i><i class="h-10 w-10 rounded-full border-2 border-fog bg-forest"></i><i class="h-10 w-10 rounded-full border-2 border-fog bg-ink/20"></i></div><p class="text-sm text-ink/65">Trusted by teams in <b class="text-ink">12 countries</b></p></div>
+  </div>
+  <div id="tilt" class="rise relative grid grid-cols-5 grid-rows-[auto_auto] gap-4" style="animation-delay:.3s">
+   <div class="pic in col-span-3 h-72 bg-gradient-to-br from-forest to-mint sm:h-80" data-s="ai"></div>
+   <div class="col-span-2 grid gap-4"><div class="pic in h-[8.5rem] bg-gradient-to-br from-lime to-[#a8e063] sm:h-[9.75rem]" data-s="cloud"></div><div class="pic in h-[8.5rem] bg-gradient-to-br from-[#bfeadd] to-mint sm:h-[9.75rem]" data-s="web"></div></div>
+   <div class="float absolute -left-3 bottom-4 rounded-2xl bg-white p-4 shadow-xl"><p class="text-xs font-medium text-ink/55">Tickets automated</p><p class="text-3xl font-extrabold text-forest">64%</p></div>
+   <div class="float absolute -right-2 top-1/2 rounded-2xl bg-lime px-4 py-3 shadow-xl" style="animation-delay:-3s"><p class="text-xs font-semibold text-forest/70">Cloud spend</p><p class="text-2xl font-extrabold text-forest">-31%</p></div>
+  </div>
+ </div>
+</section>
+<div class="overflow-hidden border-y border-forest/10 bg-white py-5"><div class="marq text-sm font-semibold text-ink/40" id="mq"></div></div>
+
+<!-- SERVICES -->
+<section id="services" class="py-24"><div class="mx-auto max-w-6xl px-5">
+ <div class="reveal max-w-2xl"><h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Everything you need, from first idea to live product</h2><p class="mt-4 text-ink/65">One team that plans, builds and supports. No handovers between vendors.</p></div>
+ <div id="svc" class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+</div></section>
+
+<!-- STATS -->
+<section class="bg-lime py-16"><div class="mx-auto grid max-w-6xl grid-cols-2 gap-10 px-5 text-forest md:grid-cols-4">
+ <div class="reveal"><p class="text-5xl font-extrabold"><span data-c="150">0</span>+</p><p class="mt-1 font-medium text-forest/70">Projects delivered</p></div>
+ <div class="reveal" style="--d:.1s"><p class="text-5xl font-extrabold"><span data-c="12">0</span></p><p class="mt-1 font-medium text-forest/70">Countries served</p></div>
+ <div class="reveal" style="--d:.2s"><p class="text-5xl font-extrabold"><span data-c="200">0</span>+</p><p class="mt-1 font-medium text-forest/70">Engineers and consultants</p></div>
+ <div class="reveal" style="--d:.3s"><p class="text-5xl font-extrabold"><span data-c="96">0</span>%</p><p class="mt-1 font-medium text-forest/70">Clients who return</p></div>
+</div></section>
+
+<!-- INDUSTRIES -->
+<section id="industries" class="py-24"><div class="mx-auto max-w-6xl px-5">
+ <div class="reveal max-w-2xl"><h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Built for the way your industry works</h2></div>
+ <div id="ind" class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"></div>
+</div></section>
+
+<!-- PROCESS -->
+<section id="process" class="px-4"><div class="mx-auto max-w-6xl rounded-[2rem] bg-forest px-6 py-16 text-white sm:px-12 sm:py-20">
+ <h2 class="reveal max-w-xl text-3xl font-extrabold tracking-tight sm:text-4xl">How we work with you</h2>
+ <div class="relative mt-14"><div class="absolute left-0 right-0 top-6 hidden h-0.5 bg-white/15 lg:block"><div id="pl" class="h-full w-0 bg-lime transition-all duration-[1400ms]"></div></div><div id="stp" class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4"></div></div>
+</div></section>
+
+<!-- ROI -->
+<section id="roi" class="py-24"><div class="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-2">
+ <div class="reveal"><h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">See what automation could save you</h2><p class="mt-4 max-w-md leading-relaxed text-ink/65">Adjust the sliders to match your team. This is a rough estimate that assumes about 60% of repetitive requests can be automated. We refine it with your real data in the first workshop.</p></div>
+ <div class="reveal rounded-[1.75rem] bg-white p-6 shadow-xl shadow-forest/10 sm:p-8">
+  <div class="space-y-6">
+   <div><div class="flex justify-between text-sm font-semibold"><label for="r1">Requests per month</label><output id="o1"></output></div><input id="r1" type="range" min="500" max="30000" step="500" value="5000" class="mt-2 w-full accent-mint"></div>
+   <div><div class="flex justify-between text-sm font-semibold"><label for="r2">Minutes per request</label><output id="o2"></output></div><input id="r2" type="range" min="2" max="45" value="10" class="mt-2 w-full accent-mint"></div>
+   <div><div class="flex justify-between text-sm font-semibold"><label for="r3">Cost per staff hour</label><span><select id="cur" class="rounded border border-ink/20 px-1"><option>&#8377;</option><option>$</option></select> <output id="o3"></output></span></div><input id="r3" type="range" min="100" max="5000" step="50" value="400" class="mt-2 w-full accent-mint"></div>
+  </div>
+  <div class="mt-8 grid grid-cols-3 gap-3 rounded-2xl bg-forest p-5 text-center text-white"><div><p class="text-xl font-extrabold sm:text-2xl" id="rh"></p><p class="mt-1 text-xs text-white/60">Hours saved a month</p></div><div><p class="text-xl font-extrabold text-lime sm:text-2xl" id="rm"></p><p class="mt-1 text-xs text-white/60">Saved a month</p></div><div><p class="text-xl font-extrabold text-lime sm:text-2xl" id="ry"></p><p class="mt-1 text-xs text-white/60">Saved a year</p></div></div>
+  <a href="#contact" class="btn mt-6 block rounded-full bg-lime px-6 py-3.5 text-center font-semibold text-forest">Get a detailed estimate</a>
+ </div>
+</div></section>
+
+<!-- WORK -->
+<section id="work" class="bg-white py-24"><div class="mx-auto max-w-6xl px-5">
+ <div class="reveal max-w-2xl"><h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Results our clients can point to</h2></div>
+ <div id="cs" class="mt-12 grid gap-6 md:grid-cols-3"></div>
+</div></section>
+
+<!-- VOICES -->
+<section id="voices" class="py-24"><div class="reveal mx-auto max-w-3xl px-5 text-center">
+ <svg class="mx-auto text-mint" width="44" height="44" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 7h4v4c0 3-1.5 5-4 6l-.8-1.4C7.6 14.900 8 13.800 8 13H7zm8 0h4v4c0 3-1.500 5-4 6l-.8-1.400c1.400-.7 1.800-1.800 1.800-2.600h-1z"/></svg>
+ <div class="relative mt-6 h-72 sm:h-52" id="tm"></div><div class="mt-4 flex justify-center gap-2" id="dots"></div>
+</div></section>
+
+<!-- CONTACT -->
+<section id="contact" class="px-4 pb-4"><div class="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-forest px-6 py-16 text-white sm:px-12 sm:py-20">
+ <div class="absolute -right-16 -top-16 h-72 w-72 rounded-full bg-mint/30 blur-3xl"></div>
+ <div class="relative grid gap-12 lg:grid-cols-2">
+  <div class="reveal"><h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Tell us what you are trying to fix</h2><p class="mt-5 max-w-md leading-relaxed text-white/70">A senior consultant replies within one working day with next steps, not a sales script.</p>
+   <dl class="mt-9 space-y-5 text-sm"><div><dt class="text-white/50">Email</dt><dd class="font-semibold">hello@yourcompany.com</dd></div><div><dt class="text-white/50">Phone</dt><dd class="font-semibold">+91 00000 00000</dd></div><div><dt class="text-white/50">Office</dt><dd class="font-semibold">Your address, City, Country</dd></div></dl></div>
+  <form id="fm" class="reveal space-y-5 rounded-3xl bg-white p-6 text-ink sm:p-8" novalidate>
+   <div class="grid gap-5 sm:grid-cols-2"><div><label for="n" class="text-sm font-semibold">Full name</label><input id="n" required class="mt-1.5 w-full rounded-xl border border-ink/15 px-3.5 py-3 outline-none focus:border-mint"><p class="e mt-1 hidden text-sm text-red-700">Enter your name.</p></div>
+   <div><label for="em" class="text-sm font-semibold">Work email</label><input id="em" type="email" required class="mt-1.5 w-full rounded-xl border border-ink/15 px-3.5 py-3 outline-none focus:border-mint"><p class="e mt-1 hidden text-sm text-red-700">Enter a valid email.</p></div></div>
+   <div><label for="t" class="text-sm font-semibold">I need help with</label><select id="t" class="mt-1.5 w-full rounded-xl border border-ink/15 bg-white px-3.5 py-3 outline-none focus:border-mint"><option>AI consulting</option><option>Web or mobile app</option><option>Cloud and DevOps</option><option>SAP or Salesforce</option><option>MVP</option><option>Staffing</option></select></div>
+   <div><label for="m" class="text-sm font-semibold">Message</label><textarea id="m" rows="3" required class="mt-1.5 w-full rounded-xl border border-ink/15 px-3.5 py-3 outline-none focus:border-mint"></textarea><p class="e mt-1 hidden text-sm text-red-700">Write a short message.</p></div>
+   <button class="btn w-full rounded-full bg-forest px-6 py-4 font-semibold text-white">Send message</button>
+   <p id="ok" class="hidden rounded-xl bg-lime px-4 py-3 text-sm font-medium text-forest" role="status">Thanks. We will reply within one working day.</p>
+  </form>
+ </div>
+</div></section>
+</main>
+<footer class="mx-auto flex max-w-6xl flex-col justify-between gap-4 px-5 py-8 text-sm text-ink/60 sm:flex-row"><p>&copy; <span id="yr"></span> Arkvane. All rights reserved.</p><div class="flex gap-6"><a class="hover:text-ink" href="#services">Services</a><a class="hover:text-ink" href="#work">Work</a><a class="hover:text-ink" href="#contact">Contact</a><a class="hover:text-ink" href="#top">Back to top</a></div></footer>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// ---- Illustrations (inline SVG). To use real photos instead, add a URL below, e.g. PHOTOS.ai='images/ai.jpg'
+const PHOTOS={};
+const F='#0B3A33',L='#D7F36B',M='#12B58F',W='#fff';
+const svg=b=>`<svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" class="h-full w-full" aria-hidden="true">${b}</svg>`;
+const SC={
+ai:svg(`<g class="spin" style="transform-origin:200px 120px"><circle cx="200" cy="120" r="92" fill="none" stroke="${W}" stroke-opacity=".35" stroke-dasharray="3 7" stroke-width="2"/><circle cx="200" cy="28" r="12" fill="${L}"/><circle cx="292" cy="120" r="9" fill="${W}"/><circle cx="130" cy="185" r="11" fill="${L}"/></g><circle cx="200" cy="120" r="52" fill="${W}" fill-opacity=".15"/><rect x="172" y="92" width="56" height="56" rx="12" fill="${W}"/><rect x="186" y="106" width="28" height="28" rx="6" fill="${F}"/><path d="M186 86v-12M200 86v-12M214 86v-12M186 154v12M200 154v12M214 154v12M166 106h-12M166 120h-12M166 134h-12M234 106h12M234 120h12M234 134h12" stroke="${W}" stroke-width="4" stroke-linecap="round"/><path d="M70 60q30 0 40 25M330 190q-30 0-40-25" stroke="${L}" stroke-width="3" fill="none" stroke-linecap="round"/>`),
+web:svg(`<rect x="52" y="38" width="296" height="168" rx="16" fill="${W}"/><path d="M52 54a16 16 0 0116-16h264a16 16 0 0116 16v14H52z" fill="${F}"/><circle cx="72" cy="53" r="4" fill="${L}"/><circle cx="86" cy="53" r="4" fill="${W}" fill-opacity=".5"/><rect x="70" y="86" width="120" height="14" rx="7" fill="${F}"/><rect x="70" y="110" width="170" height="8" rx="4" fill="#0B3A3333"/><rect x="70" y="126" width="140" height="8" rx="4" fill="#0B3A3333"/><rect x="70" y="150" width="70" height="26" rx="13" fill="${M}"/><rect x="226" y="86" width="104" height="96" rx="12" fill="${L}"/><path d="M240 160l22-26 18 14 28-36" stroke="${F}" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`),
+mob:svg(`<rect x="146" y="18" width="108" height="204" rx="22" fill="${F}"/><rect x="154" y="28" width="92" height="184" rx="16" fill="${W}"/><rect x="170" y="44" width="60" height="10" rx="5" fill="${F}"/><rect x="164" y="66" width="72" height="44" rx="10" fill="${L}"/><rect x="164" y="120" width="72" height="12" rx="6" fill="#0B3A3322"/><rect x="164" y="140" width="50" height="12" rx="6" fill="#0B3A3322"/><rect x="164" y="170" width="72" height="26" rx="13" fill="${M}"/><rect x="262" y="60" width="86" height="46" rx="12" fill="${W}"/><circle cx="280" cy="83" r="9" fill="${L}"/><rect x="296" y="76" width="40" height="8" rx="4" fill="${F}"/><rect x="52" y="140" width="84" height="46" rx="12" fill="${W}"/><path d="M64 170l16-16 12 10 20-22" stroke="${M}" stroke-width="4" fill="none" stroke-linecap="round"/>`),
+cloud:svg(`<path d="M110 150a34 34 0 010-68 50 50 0 0196-8 40 40 0 0118 76z" fill="${W}"/><rect x="132" y="160" width="136" height="14" rx="7" fill="${F}"/><rect x="132" y="182" width="136" height="14" rx="7" fill="${F}" fill-opacity=".6"/><circle cx="148" cy="167" r="3" fill="${L}"/><circle cx="148" cy="189" r="3" fill="${L}"/><path d="M200 150v10" stroke="${F}" stroke-width="3"/><path d="M70 60l14 14M320 50l-12 12M340 140h16" stroke="${F}" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>`),
+erp:svg(`<g transform="translate(70 40)"><rect width="76" height="76" rx="14" fill="${W}"/><rect x="88" width="76" height="76" rx="14" fill="${L}"/><rect x="176" width="76" height="76" rx="14" fill="${W}" fill-opacity=".5"/><rect y="88" width="76" height="76" rx="14" fill="${F}"/><rect x="88" y="88" width="76" height="76" rx="14" fill="${W}" fill-opacity=".5"/><rect x="176" y="88" width="76" height="76" rx="14" fill="${W}"/><path d="M20 130h36M108 58h36M196 110h36M196 124h24" stroke="${M}" stroke-width="5" stroke-linecap="round"/><circle cx="38" cy="38" r="10" fill="${M}"/></g>`),
+team:svg(`<circle cx="200" cy="96" r="30" fill="${W}"/><path d="M142 200c0-36 26-56 58-56s58 20 58 56z" fill="${W}"/><circle cx="108" cy="116" r="22" fill="${L}"/><path d="M66 208c0-28 18-44 42-44 12 0 22 4 30 10v34z" fill="${L}"/><circle cx="292" cy="116" r="22" fill="${F}"/><path d="M334 208c0-28-18-44-42-44-12 0-22 4-30 10v34z" fill="${F}"/><path d="M168 56q32-24 64 0" stroke="${F}" stroke-width="3" fill="none" stroke-linecap="round" stroke-opacity=".4"/>`),
+health:svg(`<rect x="120" y="50" width="160" height="140" rx="24" fill="${W}"/><path d="M188 80h24v28h28v24h-28v28h-24v-28h-28v-24h28z" fill="${M}"/><path d="M40 205h90l14-26 18 44 16-30h46" transform="translate(0 -40)" stroke="${L}" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="330" cy="70" r="14" fill="${L}"/>`),
+fin:svg(`<g fill="${W}"><rect x="76" y="130" width="36" height="76" rx="8"/><rect x="132" y="96" width="36" height="110" rx="8" fill="${L}"/><rect x="188" y="116" width="36" height="90" rx="8"/><rect x="244" y="62" width="36" height="144" rx="8" fill="${L}"/></g><path d="M70 100l60-28 60 22 100-50" stroke="${W}" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 8"/><circle cx="310" cy="64" r="26" fill="${W}"/><text x="310" y="73" text-anchor="middle" font-size="26" font-weight="800" fill="${F}">$</text>`),
+retail:svg(`<path d="M70 70h260l14 44H56z" fill="${W}"/><path d="M92 70l-6 44M140 70l-2 44M190 70v44M240 70l2 44M290 70l6 44" stroke="${M}" stroke-width="12"/><rect x="76" y="114" width="248" height="86" rx="6" fill="${W}" fill-opacity=".85"/><rect x="104" y="140" width="64" height="60" rx="6" fill="${F}"/><rect x="200" y="136" width="96" height="40" rx="8" fill="${L}"/><circle cx="332" cy="52" r="12" fill="${L}"/>`),
+log:svg(`<path d="M30 190q80-10 120-60t140-40" stroke="${W}" stroke-width="3" stroke-dasharray="4 8" fill="none" stroke-linecap="round" stroke-opacity=".7"/><rect x="120" y="80" width="130" height="80" rx="10" fill="${W}"/><path d="M250 100h40l30 30v30h-70z" fill="${L}"/><rect x="268" y="108" width="22" height="18" rx="3" fill="${F}"/><circle cx="162" cy="170" r="16" fill="${F}"/><circle cx="162" cy="170" r="6" fill="${W}"/><circle cx="288" cy="170" r="16" fill="${F}"/><circle cx="288" cy="170" r="6" fill="${W}"/><rect x="138" y="100" width="40" height="10" rx="5" fill="${M}"/><rect x="138" y="118" width="70" height="10" rx="5" fill="${F}" fill-opacity=".25"/>`)};
+const pic=k=>PHOTOS[k]?`<img src="${PHOTOS[k]}" alt="" loading="lazy" class="h-full w-full object-cover">`:SC[k];
+$$('[data-s]').forEach(e=>e.innerHTML=pic(e.dataset.s));
+// ---- Data
+const S=[['AI and automation','Assistants, copilots and document workflows connected to the tools your teams already use.','ai','from-forest to-mint'],['Web applications','Customer portals and internal tools designed with your users and built to last.','web','from-lime to-[#a8e063]'],['Mobile apps','iOS and Android apps with the speed and polish your customers expect.','mob','from-[#bfeadd] to-mint'],['Cloud and DevOps','Migration, pipelines and monitoring that keep releases fast and bills predictable.','cloud','from-mint to-forest'],['SAP and Salesforce','Implementation, migration and support from consultants who have shipped these before.','erp','from-forest to-[#1f6f60]'],['IT staffing','Vetted engineers who join your team in days, for a sprint or a longer stretch.','team','from-lime to-mint']];
+$('#svc').innerHTML=S.map((s,i)=>`<article class="card reveal group rounded-[1.75rem] bg-white p-3 shadow-sm" style="--d:${i*.08}s"><div class="pic h-48 bg-gradient-to-br ${s[3]}" style="--d:${.2+i*.08}s">${pic(s[2])}</div><div class="p-5"><h3 class="text-xl font-bold">${s[0]}</h3><p class="mt-2 leading-relaxed text-ink/65">${s[1]}</p><a href="#contact" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-forest">Learn more <span class="flex h-7 w-7 items-center justify-center rounded-full bg-lime transition group-hover:translate-x-1">&rarr;</span></a></div></article>`).join('');
+const I=[['Healthcare','Patient apps, triage assistants and records integration.','health','from-[#bfeadd] to-mint'],['Finance','KYC automation, fraud detection and safe cloud migration.','fin','from-forest to-mint'],['Retail','SAP rollout, demand forecasting and omnichannel apps.','retail','from-lime to-mint'],['Logistics','Exception agents, ETA prediction and fleet dashboards.','log','from-forest to-[#1f6f60]']];
+$('#ind').innerHTML=I.map((s,i)=>`<article class="card reveal group relative overflow-hidden rounded-[1.75rem] bg-white p-3 shadow-sm" style="--d:${i*.08}s"><div class="pic h-72 bg-gradient-to-br ${s[3]}" style="--d:${.2+i*.08}s">${pic(s[2])}</div><div class="p-4"><h3 class="text-xl font-bold">${s[0]}</h3><p class="mt-1 text-sm leading-relaxed text-ink/65">${s[1]}</p></div></article>`).join('');
+const P=[['Discover','Workshops and a short audit of your systems, data and goals.'],['Design','Prototypes and architecture you can test before we commit.'],['Build','Working software every two weeks, with demos you can steer.'],['Run','Launch, training, monitoring and ongoing support.']];
+$('#stp').innerHTML=P.map((p,i)=>`<div class="reveal" style="--d:${i*.15}s"><div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-lime font-extrabold text-forest ring-8 ring-forest">${i+1}</div><h3 class="mt-5 text-xl font-bold">${p[0]}</h3><p class="mt-2 text-white/65">${p[1]}</p></div>`).join('');
+const C=[['Logistics','Exception handling cut from hours to minutes','An AI assistant reads carrier emails, matches orders and drafts replies for approval.','log','from-forest to-mint'],['Retail','SAP rollout across 40 stores with no trading downtime','Finance and inventory moved to one platform in phased releases.','retail','from-lime to-mint'],['Finance','Cloud migration with a lower monthly bill','Sixty applications moved in phases with cost tracking from week one.','cloud','from-mint to-forest']];
+$('#cs').innerHTML=C.map((c,i)=>`<article class="card reveal group rounded-[1.75rem] bg-fog p-3" style="--d:${i*.1}s"><div class="pic relative h-52 bg-gradient-to-br ${c[4]}" style="--d:${.2+i*.1}s">${pic(c[3])}<span class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs font-bold">${c[0]}</span></div><div class="p-5"><h3 class="text-xl font-bold leading-snug">${c[1]}</h3><p class="mt-3 text-ink/65">${c[2]}</p><a href="#contact" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-forest">Read case study <span class="flex h-7 w-7 items-center justify-center rounded-full bg-lime transition group-hover:translate-x-1">&rarr;</span></a></div></article>`).join('');
+const T=[['Their team understood our operations in a week and shipped a working assistant in six. Our support backlog is gone.','Priya Sharma','COO, logistics company'],['Calm, senior and honest about trade-offs. The SAP rollout finished on the date they gave us in month one.','Rahul Mehta','CIO, retail group'],['They treated our cloud bill like their own. We saw the savings in the first quarter.','Anita Rao','CTO, financial services firm']];
+$('#tm').innerHTML=T.map((t,i)=>`<figure class="slide"><blockquote class="text-xl font-semibold leading-relaxed sm:text-2xl">&ldquo;${t[0]}&rdquo;</blockquote><figcaption class="mt-6 text-sm text-ink/60"><b class="text-ink">${t[1]}</b>, ${t[2]}</figcaption></figure>`).join('');
+$('#dots').innerHTML=T.map((_,i)=>`<button class="h-2.5 rounded-full transition-all" aria-label="Show testimonial ${i+1}"></button>`).join('');
+let ti=0,tt;const sl=$$('.slide'),dt=$$('#dots button');
+const show=i=>{ti=i;sl.forEach((s,k)=>s.classList.toggle('on',k===i));dt.forEach((d,k)=>d.className='h-2.5 rounded-full transition-all '+(k===i?'w-8 bg-mint':'w-2.5 bg-ink/20'))};
+const auto=()=>{clearInterval(tt);tt=setInterval(()=>show((ti+1)%sl.length),6000)};
+dt.forEach((d,i)=>d.onclick=()=>{show(i);auto()});show(0);auto();
+const tech=['AWS','Azure','Google Cloud','SAP','Salesforce','Kubernetes','React','Flutter','Node.js','Python','Terraform','Snowflake','Power BI','Databricks'];
+$('#mq').innerHTML=[...tech,...tech].map(t=>`<span class="mx-9 whitespace-nowrap">${t}</span>`).join('');
+// ---- Behaviour
+addEventListener('scroll',()=>{$('#bar').style.width=(scrollY/(document.body.scrollHeight-innerHeight)*100)+'%'},{passive:true});
+$('#mb').onclick=()=>{const o=$('#mn').classList.toggle('hidden')===false;$('#mb').setAttribute('aria-expanded',o)};
+$$('#mn a').forEach(a=>a.onclick=()=>$('#mn').classList.add('hidden'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');if(e.target.id==='process')setTimeout(()=>$('#pl').style.width='100%',300);io.unobserve(e.target)}),{threshold:.15});
+$$('.reveal,#process').forEach(el=>io.observe(el));
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,end=+el.dataset.c,t0=performance.now(),d=reduce?1:1600;(function f(t){const p=Math.min((t-t0)/d,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(t0);co.unobserve(el)}),{threshold:.6});
+$$('[data-c]').forEach(el=>co.observe(el));
+const tl=$('#tilt');if(!reduce&&matchMedia('(pointer:fine)').matches){addEventListener('mousemove',e=>{const x=(e.clientX/innerWidth-.5),y=(e.clientY/innerHeight-.5);tl.style.transform=`perspective(900px) rotateY(${x*6}deg) rotateX(${-y*6}deg)`})}
+const fmt=n=>Math.round(n).toLocaleString('en-IN');
+function roi(){const a=+$('#r1').value,b=+$('#r2').value,c=+$('#r3').value,cu=$('#cur').value,h=a*.6*b/60;$('#o1').textContent=fmt(a);$('#o2').textContent=b;$('#o3').textContent=fmt(c);$('#rh').textContent=fmt(h);$('#rm').textContent=cu+fmt(h*c);$('#ry').textContent=cu+fmt(h*c*12)}
+['r1','r2','r3','cur'].forEach(id=>$('#'+id).addEventListener('input',roi));roi();
+// Form is a demo: connect to Formspree, Netlify Forms or your own API
+$('#fm').addEventListener('submit',e=>{e.preventDefault();let ok=true;$$('#fm [required]').forEach(f=>{const bad=!f.value.trim()||(f.type==='email'&&!/^\S+@\S+\.\S+$/.test(f.value));f.nextElementSibling.classList.toggle('hidden',!bad);if(bad)ok=false});if(ok){$('#ok').classList.remove('hidden');e.target.reset()}});
+$('#yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
